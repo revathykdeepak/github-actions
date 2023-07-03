@@ -17,3 +17,12 @@ jobs:
           import platform
           print (platform.processor())
         shell: python
+  #second job - runs in parellel
+  run-windows-command: 
+    runs-on: windows-latest
+    steps:
+      - name: Directory poershell
+        run: Get-location
+      - name: Directory bash
+        run: pwd
+        shell: bash
