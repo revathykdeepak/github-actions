@@ -26,3 +26,11 @@ jobs:
       - name: Directory bash
         run: pwd
         shell: bash
+  #3rd job - runs after 2nd (serially)
+  run-windows-command2: 
+    runs-on: windows-latest
+    needs: ["run-windows-command"]
+    steps:
+      - name: Directory bash
+        run: ls
+        shell: bash
