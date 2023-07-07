@@ -6,6 +6,16 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Learn env variables & commands
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA # to get CURRENT GITHUB COMMIT iD
+          echo $GITHUB_REPOSITORY 
+          echo $GITHUB_WORKSPACE #WORKSPACE DIRECTORY
+          echo "${{github.token}}" #token to access repository
+          
+
       - name: Simple Js Action
         id: greet
       # can use an action in present dir or a published repo
