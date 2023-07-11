@@ -3,7 +3,7 @@ name: Actions Workflow
 # on: [push, pull_request]
 on:
   push:
-  pull_request:
+  pull_request: [assigned] 
 
 jobs:
   run-github-actions:
