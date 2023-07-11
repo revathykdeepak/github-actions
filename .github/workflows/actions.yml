@@ -3,7 +3,7 @@ name: Actions Workflow
 # on: [push, pull_request]
 on:
   push:
-  pull_request: [closed, opened, assigned, reopened]
+  pull_request: [closed]
 
 jobs:
   run-github-actions:
