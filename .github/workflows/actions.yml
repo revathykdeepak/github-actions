@@ -1,7 +1,7 @@
 name: Actions Workflow
 
 # on: [push, pull_request]
-on: 
+on:
   push:
   pull_request: [closed, openend, assigned, reopened]
 
