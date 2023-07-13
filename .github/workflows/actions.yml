@@ -8,11 +8,15 @@ on:
   #  - cron: "1-59/12 * * * *"
   pull_request: 
     types: [closed, opened, assigned, reopened]
+  repository_dispatch:
+    types: [build]
 
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Get dispatch params
+        run: echo ${{ github.event.client_payload.env}}
       - name: Learn env variables & commands
         run: |
           pwd
