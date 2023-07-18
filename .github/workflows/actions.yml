@@ -2,7 +2,23 @@ name: Actions Workflow
 
 # on: [push, pull_request]
 on:
-  #push:
+  # filters
+  push:
+    branches:
+      - master
+      - 'feat/*' # matches feat/A, feat/b etc. 
+                 # won't match feat/x/y
+      - 'feat/**'   # matches feat/x/y
+      - '!feat/c' # to ignore this specific branch
+    # only one of branches or branches-ignore can be used at a time  
+    # branches-ignore:
+    #   - test
+    tags-ignore: # also have tags
+      - v0.*
+    paths-ignore: # also paths-ignore
+      - 'docs/**'
+      - '**.js'
+
   #schedule:
   #  - cron: "*/10 * * * *" 
   #  - cron: "1-59/12 * * * *"
