@@ -12,7 +12,6 @@ jobs:
           echo ${{ startsWith('Hello world', 'He')}}
           echo ${{ endsWith('Hello world', 'ld')}}
           echo ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')}}
-          echo ${{ toJSON(job)}}
           echo ${{ hashFiles('**/env.yml')}}
   dump_contexts_to_log:
     runs-on: ubuntu-latest
