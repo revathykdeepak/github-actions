@@ -12,8 +12,6 @@ jobs:
         node: [13, 14]
         os: [macos-latest, ubuntu-latest, windows-latest]
         experimental: [false]
-        exclude:
-          - node: 14
         include:
           - node: 15
             os: ubuntu-latest
